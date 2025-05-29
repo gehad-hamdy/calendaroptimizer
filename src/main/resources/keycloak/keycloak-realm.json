@@ -1,0 +1,48 @@
+{
+  "realm": "property-rental-realm",
+  "enabled": true,
+  "clients": [
+    {
+      "clientId": "property-rental-client",
+      "enabled": true,
+      "publicClient": false,
+      "secret": "secret",
+      "redirectUris": ["*"],
+      "webOrigins": ["*"],
+      "standardFlowEnabled": true,
+      "directAccessGrantsEnabled": true,
+      "serviceAccountsEnabled": true,
+      "authorizationServicesEnabled": true
+    }
+  ],
+  "users": [
+    {
+      "username": "admin",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "admin",
+          "temporary": false
+        }
+      ],
+      "realmRoles": ["admin"]
+    }
+  ],
+  "roles": {
+    "realm": [
+      {
+        "name": "admin",
+        "description": "Admin role with all permissions"
+      },
+      {
+        "name": "owner",
+        "description": "Property owner role"
+      },
+      {
+        "name": "user",
+        "description": "Regular user role"
+      }
+    ]
+  }
+}
